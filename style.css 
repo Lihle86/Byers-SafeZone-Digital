@@ -1,0 +1,248 @@
+/* Color Palette & Base resets */
+:root {
+    --primary: #0d1b2a;
+    --secondary: #1b263b;
+    --accent: #e63946;
+    --success: #2a9d8f;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f3f5;
+    color: var(--dark);
+    line-height: 1.5;
+}
+
+/* Header styling */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.logo-container h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.sub-brand {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.emergency-header {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.btn-emergency {
+    display: block;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Main Layout container */
+main {
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.alert-banner {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    border-left: 4px solid var(--secondary);
+    padding-left: 8px;
+}
+
+.instruction, .section-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+/* Sector Switching Buttons */
+.sector-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.btn-sector {
+    flex: 1;
+    padding: 10px 5px;
+    border: 1px solid var(--secondary);
+    background: white;
+    color: var(--secondary);
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-sector.active {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Simulated Map Engine */
+.map-container {
+    width: 100%;
+    height: 220px;
+    background-color: #e5e5e5;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.map-graphic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+/* Lightweight simulated background textures to replace heavy map data */
+.retail-bg { background: radial-gradient(circle, #fff 20%, #e9ecef 21%, #e9ecef 100%); }
+.foreshore-bg { background: linear-gradient(45deg, #dee2e6 25%, #fff 25%, #fff 75%, #dee2e6 75%); }
+.eastcity-bg { background: repeating-linear-gradient(45deg, #f8f9fa, #f8f9fa 10px, #e9ecef 10px, #e9ecef 20px); }
+
+.marker {
+    position: absolute;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #bbb;
+}
+
+.user-location {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+    z-index: 10;
+}
+
+.meta-text {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+/* Grids and Shifts */
+.grid-two {
+    display: flex;
+    gap: 10px;
+}
+
+.shift-box {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    background: #f8f9fa;
+}
+
+.shift-box h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.day-shift h3 { color: #b5838d; }
+.night-shift h3 { color: #4a4e69; }
+
+.shift-box ul {
+    list-style-type: none;
+    font-size: 0.85rem;
+}
+
+/* Metrics Dashboard */
+.metrics-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.metric-item {
+    flex: 1;
+    background: var(--light);
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    border-top: 3px solid var(--success);
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--success);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+/* Footer structure */
+footer {
+    text-align: center;
+    padding: 20px 15px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
+
+footer p { margin-bottom: 4px; }
+.legal { color: var(--gray); margin-top: 10px; font-size: 0.75rem; }
+
+/* Desktop view minor adjustments */
+@media (min-width: 600px) {
+    header { flex-direction: row; justify-content: space-between; padding: 15px 40px; }
+    .emergency-header { width: auto; margin-top: 0; }
+}
