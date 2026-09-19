@@ -1,1 +1,105 @@
 
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBD Wayfinding | Byers Security & CCID</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags for PWA data-free optimization -->
+    <meta name="theme-color" content="#0d1b2a">
+    <meta name="description" content="Data-free digital navigation and public safety portal for Cape Town CBD.">
+</head>
+<body>
+
+    <!-- Header / Brand -->
+    <header>
+        <div class="logo-container">
+            <h1>BYERS SECURITY</h1>
+            <span class="sub-brand">In Partnership with CCID</span>
+        </div>
+        <div class="emergency-header">
+            <a href="tel:0824157127" class="btn-emergency">🚨 24HR CONTROL ROOM</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Quick Alert System -->
+        <section class="alert-banner">
+            <p><strong>✨ Data-Free Portal:</strong> This application is zero-rated and uses 0MB of your data bundle.</p>
+        </section>
+
+        <!-- Interactive Map Sector Matrix -->
+        <section class="card map-section">
+            <h2>📍 CBD Interactive Wayfinding</h2>
+            <p class="instruction">Select a sector to view active safety routes and safe zones:</p>
+            
+            <div class="sector-buttons">
+                <button class="btn-sector active" onclick="switchSector('retail')">Retail Hub</button>
+                <button class="btn-sector" onclick="switchSector('foreshore')">Foreshore</button>
+                <button class="btn-sector" onclick="switchSector('eastcity')">East City</button>
+            </div>
+
+            <!-- Conceptual Lightweight Map Graphic placeholder -->
+            <div class="map-container">
+                <div id="map-display" class="map-graphic retail-bg">
+                    <div class="marker kiosk-marker" style="top: 40%; left: 30%;">ℹ️ Kiosk</div>
+                    <div class="marker safe-zone" style="top: 60%; left: 70%;">🛡️ Safe Container</div>
+                    <div class="marker user-location" id="you-are-here" style="top: 20%; left: 50%;">👤 You Are Here</div>
+                </div>
+            </div>
+            <p id="sector-description" class="meta-text">Showing **Retail Hub** safe pathways and fixed Byers security containers.</p>
+        </section>
+
+        <!-- Shift Transparency -->
+        <section class="card">
+            <h2>📋 Active Duty Management</h2>
+            <p class="section-desc">Real-time shift transparency for accountability and public trust.</p>
+            <div class="grid-two">
+                <div class="shift-box day-shift">
+                    <h3>☀️ Day Shift Managers</h3>
+                    <ul>
+                        <li>Alec van de Rheede</li>
+                        <li>Tinus Jenkins</li>
+                    </ul>
+                </div>
+                <div class="shift-box night-shift">
+                    <h3>🌙 Night Shift Managers</h3>
+                    <ul>
+                        <li>Gary Dyssel</li>
+                        <li>Edward Edwardes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Success Board -->
+        <section class="card metrics-card">
+            <h2>📈 CCID Safety Success Board</h2>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <span class="metric-value">📉 Drop</span>
+                    <span class="metric-label">General Theft</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">🛡️ Stable</span>
+                    <span class="metric-label">Cellphone Crime</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">⚡ 100%</span>
+                    <span class="metric-label">Kiosk Uptime</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Documentation -->
+    <footer>
+        <p><strong>Project Coordinator:</strong> PSO Lihle Duda (CT459)</p>
+        <p>Byers Security Operational HQ, Cape Town CBD</p>
+        <p class="legal">&copy; 2026 Byers Security. Read-only Data-Free Platform.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
